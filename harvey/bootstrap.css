@@ -7664,11 +7664,6 @@ label {
   box-shadow: none;
 }
 
-.breadcrumb {
-  border-color: #ededed;
-  border-style: solid;
-}
-
 .pagination > li > a,
 .pagination > li > span,
 .pager > li > a,

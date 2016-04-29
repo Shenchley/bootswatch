@@ -341,8 +341,6 @@ label {
 }
 
 .breadcrumb {
-  border-color: darken($breadcrumb-bg, 5%);
-  border-style: solid;
   @include shadow();
 }
 
