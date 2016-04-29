@@ -1,4 +1,4 @@
-// Lumen 3.3.5
+// Harvey 3.3.5
 // Bootswatch
 // -----------------------------------------------------
 
@@ -6,14 +6,11 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400
 @import url($web-font-path);
 
 @mixin shadow($width: 4px){
-  border-width: 0 1px $width 1px;
+  //border-width: 0 1px $width 1px;
 }
 
 // Navbar =====================================================================
 
-.navbar  {
-  @include shadow();
-}
 
 // Buttons ====================================================================
 
@@ -34,68 +31,68 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400
     border-bottom-width: 2px;
     @include box-shadow(none);
   }
+}
 
-  &-lg,
-  &-group-lg > .btn {
-    padding: ($padding-large-vertical + 2) $padding-large-horizontal $padding-large-vertical;
-    line-height: 15px;
-  }
+.btn-lg,
+.btn-group-lg > .btn {
+  padding: ($padding-large-vertical + 2) $padding-large-horizontal $padding-large-vertical;
+  line-height: 15px;
+}
 
-  &-sm,
-  &-group-sm > .btn {
-    padding: ($padding-small-vertical + 2) $padding-small-horizontal $padding-small-vertical;
-  }
+.btn-sm,
+.btn-group-sm > .btn {
+  padding: ($padding-small-vertical + 2) $padding-small-horizontal $padding-small-vertical;
+}
 
-  &-xs,
-  &-group-xs > .btn {
-    padding: ($padding-xs-vertical + 2) $padding-xs-horizontal $padding-xs-vertical;
-  }
+.btn-xs,
+.btn-group-xs > .btn {
+  padding: ($padding-xs-vertical + 2) $padding-xs-horizontal $padding-xs-vertical;
+}
 
-  &-default:hover,
-  &-default:focus,
-  &-group.open .dropdown-toggle.btn-default {
-    background-color: $btn-default-border;
-    border-color: $btn-default-border;
-  }
+.btn-default:hover,
+.btn-default:focus,
+.btn-group.open .dropdown-toggle.btn-default {
+  background-color: $btn-default-border;
+  border-color: $btn-default-border;
+}
 
-  &-primary:hover,
-  &-primary:focus,
-  &-group.open .dropdown-toggle.btn-primary {
-    background-color: $btn-primary-border;
-    border-color: $btn-primary-border;
-  }
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-group.open .dropdown-toggle.btn-primary {
+  background-color: $btn-primary-border;
+  border-color: $btn-primary-border;
+}
 
-  &-success:hover,
-  &-success:focus,
-  &-group.open .dropdown-toggle.btn-success {
-    background-color: $btn-success-border;
-    border-color: $btn-success-border;
-  }
+btn-success:hover,
+btn-success:focus,
+btn-group.open .dropdown-toggle.btn-success {
+  background-color: $btn-success-border;
+  border-color: $btn-success-border;
+}
 
-  &-info:hover,
-  &-info:focus,
-  &-group.open .dropdown-toggle.btn-info {
-    background-color: $btn-info-border;
-    border-color: $btn-info-border;
-  }
+.btn-info:hover,
+.btn-info:focus,
+.btn-group.open .dropdown-toggle.btn-info {
+  background-color: $btn-info-border;
+  border-color: $btn-info-border;
+}
 
-  &-warning:hover,
-  &-warning:focus,
-  &-group.open .dropdown-toggle.btn-warning {
-    background-color: $btn-warning-border;
-    border-color: $btn-warning-border;
-  }
+.btn-warning:hover,
+.btn-warning:focus,
+.btn-group.open .dropdown-toggle.btn-warning {
+  background-color: $btn-warning-border;
+  border-color: $btn-warning-border;
+}
 
-  &-danger:hover,
-  &-danger:focus,
-  &-group.open .dropdown-toggle.btn-danger {
-    background-color: $btn-danger-border;
-    border-color: $btn-danger-border;
-  }
+.btn-danger:hover,
+.btn-danger:focus,
+.btn-group.open .dropdown-toggle.btn-danger {
+  background-color: $btn-danger-border;
+  border-color: $btn-danger-border;
+}
 
-  &-group.open .dropdown-toggle {
-    @include box-shadow(none);
-  }
+.btn-group.open .dropdown-toggle {
+  @include box-shadow(none);
 }
 
 .navbar-btn {
@@ -437,10 +434,10 @@ label {
 .progress {
   border: 1px solid $navbar-default-border;
   @include box-shadow(inset 0 2px 0 rgba(0, 0, 0, 0.1));
+}
 
-  &-bar {
-    @include box-shadow(inset 0 -4px 0 rgba(0, 0, 0, 0.15));
-  }
+.progress-bar {
+  @include box-shadow(inset 0 -4px 0 rgba(0, 0, 0, 0.15));
 }
 
 // Containers =================================================================
@@ -457,38 +454,38 @@ a.list-group-item {
   &.active:focus {
     border-color: $list-group-border;
   }
+}
 
-  &-success {
-    &.active {
-      background-color: $state-success-bg;
-    }
-
-    &.active:hover,
-    &.active:focus {
-      background-color: darken($state-success-bg, 5%);
-    }
+a.list-group-item-success {
+  &.active {
+    background-color: $state-success-bg;
   }
 
-  &-warning {
-    &.active {
-      background-color: $state-warning-bg;
-    }
-    
-    &.active:hover,
-    &.active:focus {
-      background-color: darken($state-warning-bg, 5%);
-    }
+  &.active:hover,
+  &.active:focus {
+    background-color: darken($state-success-bg, 5%);
+  }
+}
+
+a.list-group-item-warning {
+  &.active {
+    background-color: $state-warning-bg;
   }
 
-  &-danger {
-    &.active {
-      background-color: $state-danger-bg;
-    }
-    
-    &.active:hover,
-    &.active:focus {
-      background-color: darken($state-danger-bg, 5%);
-    }
+  &.active:hover,
+  &.active:focus {
+    background-color: darken($state-warning-bg, 5%);
+  }
+}
+
+a.list-group-item-danger {
+  &.active {
+    background-color: $state-danger-bg;
+  }
+
+  &.active:hover,
+  &.active:focus {
+    background-color: darken($state-danger-bg, 5%);
   }
 }
 
@@ -501,10 +498,11 @@ a.list-group-item {
   border: 1px solid $navbar-default-border;
   @include shadow();
 
-  &-default {
-    .close {
-      color: $text-color;
-    }
+}
+
+.panel-default {
+  .close {
+    color: $text-color;
   }
 }
 
@@ -516,4 +514,102 @@ a.list-group-item {
 
 .popover {
   color: $text-color;
+}
+
+/* customizations */
+
+.navbar-brand { /* change padding for 30px logo */
+    padding: 10px 15px;
+}
+
+.navbar .nav>li>a{
+    font-size: 1.3em;
+    font-weight: 500;
+}
+
+.navbar .dropdown-menu {
+    padding: 15px;
+}
+.navbar .dropdown-menu>li>a{
+    font-size: 1.2em;
+}
+.navbar .navbar-text.text-center{
+    float: none;
+}
+
+/*
+Nav-tabs style for Harvey
+
+.nav-tabs-harvey            -  Subtle tab styling according to the general harvey theme
+
+*/
+
+.nav-tabs>li:first-child{
+    margin-left:0;
+    margin-right:3px;
+}
+.nav-tabs>li{
+    margin-left:3px;
+    margin-right:3px;
+}
+
+.nav-tabs>li>a{
+    margin-top:0;
+    padding-top:13px;
+    padding-bottom: 13px;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+    border-radius: 0;
+    border: none;
+    margin-right:0;
+}
+
+.nav-tabs>li.active>a{
+    color: #ffffff;
+    background: #86c9c7;
+    border:none;
+    overflow: visible;
+}
+.nav-tabs>li.active>a::after{
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -10px;
+    width: 0;
+    height: 0;
+    border: solid transparent;
+    border-width: 10px;
+    border-top-color: #86c9c7;
+    content: '';
+    pointer-events: none;
+}
+.nav-tabs>li.active>a:hover{
+    color: #ffffff;
+    background: #86c9c7;
+    border:none;
+}
+.nav-tabs>li>a:hover{
+    color: #ffffff;
+    background: #86c9c7;
+}
+.tab-panel{
+    background: #f6f6f4;
+    padding: 20px 15px;
+    min-height: 468px;
+}
+.tab-panel .panel-header{
+    font-size: 1.8em;
+    font-weight: 500;
+    text-align: center;
+    margin-top: 30px;
+    display: block;
+}
+.tab-panel hr{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    width: 85%;
+    border: 0;
+    border-top: 1px solid #737269;
 }
