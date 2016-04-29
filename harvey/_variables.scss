@@ -105,8 +105,8 @@ $line-height-large:         1.3333333 !default; // extra decimals for Win 8.1 Ch
 $line-height-small:         1.5 !default;
 
 $border-radius-base:        0px !default;
-$border-radius-large:       5px !default;
-$border-radius-small:       2px !default;
+$border-radius-large:       0px !default;
+$border-radius-small:       0px !default;
 
 //** Global color for active items (e.g., navs or dropdowns).
 $component-active-color:    #fff !default;
@@ -652,7 +652,7 @@ $progress-bg:                 $jumbotron-bg !default;
 //** Progress bar text color
 $progress-bar-color:          #fff !default;
 //** Variable for setting rounded corners on progress bar.
-$progress-border-radius:      2.5em !default;
+$progress-border-radius:      $border-radius-base !default;
 
 //** Default progress bar color
 $progress-bar-bg:             $brand-primary !default;
