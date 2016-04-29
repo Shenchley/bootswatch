@@ -4542,7 +4542,7 @@ tbody.collapse.in {
 }
 .nav > li > a:hover, .nav > li > a:focus {
   text-decoration: none;
-  background-color: #86c9c7;
+  background-color: white;
 }
 .nav > li.disabled > a {
   color: #999999;
@@ -4554,7 +4554,7 @@ tbody.collapse.in {
   cursor: not-allowed;
 }
 .nav .open > a, .nav .open > a:hover, .nav .open > a:focus {
-  background-color: #86c9c7;
+  background-color: white;
   border-color: #81cfd4;
 }
 .nav .nav-divider {
@@ -7855,9 +7855,6 @@ Nav-tabs style for Harvey
 }
 
 .nav-tabs > li.active > a {
-  color: #ffffff;
-  background: #86c9c7;
-  border: none;
   overflow: visible;
 }
 
@@ -7875,19 +7872,7 @@ Nav-tabs style for Harvey
   pointer-events: none;
 }
 
-.nav-tabs > li.active > a:hover {
-  color: #ffffff;
-  background: #86c9c7;
-  border: none;
-}
-
-.nav-tabs > li > a:hover {
-  color: #ffffff;
-  background: #86c9c7;
-}
-
 .tab-panel {
-  background: #f6f6f4;
   padding: 20px 15px;
   min-height: 468px;
 }
@@ -7905,5 +7890,4 @@ Nav-tabs style for Harvey
   margin-bottom: 15px;
   width: 85%;
   border: 0;
-  border-top: 1px solid #737269;
 }

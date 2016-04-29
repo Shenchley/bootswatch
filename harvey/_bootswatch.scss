@@ -567,9 +567,6 @@ Nav-tabs style for Harvey
 }
 
 .nav-tabs>li.active>a{
-    color: #ffffff;
-    background: #86c9c7;
-    border:none;
     overflow: visible;
 }
 .nav-tabs>li.active>a::after{
@@ -581,21 +578,12 @@ Nav-tabs style for Harvey
     height: 0;
     border: solid transparent;
     border-width: 10px;
-    border-top-color: #86c9c7;
+    border-top-color: $navbar-default-bg;
     content: '';
     pointer-events: none;
 }
-.nav-tabs>li.active>a:hover{
-    color: #ffffff;
-    background: #86c9c7;
-    border:none;
-}
-.nav-tabs>li>a:hover{
-    color: #ffffff;
-    background: #86c9c7;
-}
+
 .tab-panel{
-    background: #f6f6f4;
     padding: 20px 15px;
     min-height: 468px;
 }
@@ -611,5 +599,4 @@ Nav-tabs style for Harvey
     margin-bottom: 15px;
     width: 85%;
     border: 0;
-    border-top: 1px solid #737269;
 }
