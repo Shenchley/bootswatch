@@ -1,7 +1,7 @@
 /*!
  * bootswatch v3.3.6
  * Homepage: http://bootswatch.com
- * Copyright 2012-2016 Thomas Park
+ * Copyright 2012-2017 Thomas Park
  * Licensed under MIT
  * Based on Bootstrap
 */
@@ -7450,6 +7450,30 @@ btn-group.open .dropdown-toggle.btn-success {
 .btn-group.open .dropdown-toggle.btn-danger {
   background-color: #cd756f;
   border-color: #cd756f;
+}
+
+.border {
+  border: 0.5pt;
+}
+
+.border-primary {
+  border: solid #59b5b1;
+}
+
+.border-success {
+  border: solid #6ebf7d;
+}
+
+.border-info {
+  border: solid #4c4a91;
+}
+
+.border-warning {
+  border: solid #ea5810;
+}
+
+.border-danger {
+  border: solid #cd756f;
 }
 
 .btn-group.open .dropdown-toggle {

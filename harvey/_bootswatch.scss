@@ -87,6 +87,30 @@ btn-group.open .dropdown-toggle.btn-success {
   border-color: $btn-danger-border;
 }
 
+.border {
+  border: 0.5pt;
+}
+
+.border-primary {
+  border: solid $btn-primary-border;
+}
+
+.border-success {
+  border: solid $btn-success-border;
+}
+
+.border-info {
+  border: solid $btn-info-border;
+}
+
+.border-warning {
+  border: solid $btn-warning-border;
+}
+
+.border-danger {
+  border: solid $btn-danger-border;
+}
+
 .btn-group.open .dropdown-toggle {
   @include box-shadow(none);
 }
