@@ -128,9 +128,9 @@ $table-condensed-cell-padding:  5px !default;
 //** Default background color used for all tables.
 $table-bg:                      transparent !default;
 //** Background color used for `.table-striped`.
-$table-bg-accent:               $gray-base !default;
+$table-bg-accent:               darken($gray-base, 5%) !default;
 //** Background color used for `.table-hover`.
-$table-bg-hover:                $gray !default;
+$table-bg-hover:                $gray-base !default;
 $table-bg-active:               $table-bg-hover !default;
 
 //** Border color for table and cell borders.
@@ -165,7 +165,7 @@ $btn-warning-border:             darken($btn-warning-bg, 10%) !default;
 
 $btn-danger-color:               $text-color !default;
 $btn-danger-bg:                  $brand-danger !default;
-$btn-danger-border:              darken($btn-danger-bg, 10%) !default;
+$btn-danger-border:              darken($btn-danger-bg, 5%) !default;
 
 $btn-link-disabled-color:        $gray-light !default;
 
@@ -182,7 +182,7 @@ $btn-border-radius-small:        $border-radius-small !default;
 //** `<input>` background color
 $input-bg:                       #fff !default;
 //** `<input disabled>` background color
-$input-bg-disabled:              $gray-light !default;
+$input-bg-disabled:              darken($gray-light, 10%) !default;
 
 //** Text color for `<input>`s
 $input-color:                    $text-color !default;

@@ -534,8 +534,8 @@ a.list-group-item-danger {
 
 // Navbar Customizations ====================================================================
 
-.navbar-brand { /* change padding for 30px logo */
-    padding: 0px 15px 0px 15px;
+.navbar-brand { /* change padding for 50px logo */
+    padding: 0px 5px 0px 5px;
 }
 
 .navbar .nav>li>a{
@@ -610,7 +610,7 @@ a.list-group-item-danger {
 // Nav Tabs Customizations ====================================================================
 
 ul.nav-wizard {
-  background: $gray;
+  background: $gray-dark;
   -webkit-border-radius: $border-radius-base;
   -moz-border-radius: $border-radius-base;
   border-radius:$border-radius-base;
@@ -659,7 +659,7 @@ ul.nav-wizard li:before {
   position: absolute;
   display: block;
   border: 24px solid transparent;
-  border-left: 16px solid $gray-light;
+  border-left: 16px solid $gray-dark;
   border-right: 0;
   top: -1px;
   z-index: 10;
@@ -670,7 +670,7 @@ ul.nav-wizard li:after {
   position: absolute;
   display: block;
   border: 24px solid transparent;
-  border-left: 16px solid $gray;
+  border-left: 16px solid $gray-dark;
   border-right: 0;
   top: -1px;
   z-index: 10;
@@ -678,29 +678,27 @@ ul.nav-wizard li:after {
   right: -15px;
 }
 ul.nav-wizard li.active {
-  background: $navbar-default-bg;
+  background: $brand-primary;
 }
 ul.nav-wizard li.active:after {
-  border-left: 16px solid $navbar-default-bg;
+  border-left: 16px solid $brand-primary;
 }
 ul.nav-wizard li.active a,
 ul.nav-wizard li.active a:active,
 ul.nav-wizard li.active a:visited,
 ul.nav-wizard li.active a:focus {
-  background: $navbar-default-bg;
+  background: $brand-primary;
   color: $text-color;
 }
-ul.nav-wizard .active ~ li {
-  background: $gray;
-}
+
 ul.nav-wizard .active ~ li:after {
-  border-left: 16px solid $gray;
+  border-left: 16px solid $gray-dark;
 }
 ul.nav-wizard .active ~ li a,
 ul.nav-wizard .active ~ li a:active,
 ul.nav-wizard .active ~ li a:visited,
 ul.nav-wizard .active ~ li a:focus {
-  background: $gray;
+  background: $gray-dark;
 }
 
 ul.nav-wizard.nav-wizard-backnav li:hover:after {
@@ -708,16 +706,16 @@ ul.nav-wizard.nav-wizard-backnav li:hover:after {
 }
 
 ul.nav-wizard.nav-wizard-backnav .active ~ li {
-  color: $gray-light;
-  background: $gray-lighter;
+  color: $text-color;
+  background: $brand-primary;
 }
 ul.nav-wizard.nav-wizard-backnav .active ~ li:after {
-  border-left: 16px solid $gray-lighter;
+  border-left: 16px solid $gray-base;
 }
 ul.nav-wizard.nav-wizard-backnav .active ~ li a,
 ul.nav-wizard.nav-wizard-backnav .active ~ li a:active,
 ul.nav-wizard.nav-wizard-backnav .active ~ li a:visited,
 ul.nav-wizard.nav-wizard-backnav .active ~ li a:focus {
-  color: $gray-light;
-  background: $gray-lighter;
+  color: $text-color;
+  background: $gray-base;
 }
