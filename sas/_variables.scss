@@ -167,7 +167,7 @@ $btn-danger-color:               $text-color !default;
 $btn-danger-bg:                  $brand-danger !default;
 $btn-danger-border:              darken($btn-danger-bg, 5%) !default;
 
-$btn-link-disabled-color:        $gray-light !default;
+$btn-link-disabled-color:        $gray-dark !default;
 
 // Allows for customizing button radius independently from global border radius
 $btn-border-radius-base:         $border-radius-base !default;
@@ -182,7 +182,7 @@ $btn-border-radius-small:        $border-radius-small !default;
 //** `<input>` background color
 $input-bg:                       #fff !default;
 //** `<input disabled>` background color
-$input-bg-disabled:              darken($gray-light, 10%) !default;
+$input-bg-disabled:              $gray-light !default;
 
 //** Text color for `<input>`s
 $input-color:                    $text-color !default;
@@ -253,10 +253,10 @@ $dropdown-link-active-color:     $component-active-color !default;
 $dropdown-link-active-bg:        $component-active-bg !default;
 
 //** Disabled dropdown menu item background color.
-$dropdown-link-disabled-color:   $gray-light !default;
+$dropdown-link-disabled-color:   $gray-dark !default;
 
 //** Text color for headers within dropdown menus.
-$dropdown-header-color:          $gray-light !default;
+$dropdown-header-color:          $gray-dark !default;
 
 //** Deprecated `$dropdown-caret-color` as of v3.1.0
 $dropdown-caret-color:           #000 !default;
@@ -374,7 +374,7 @@ $navbar-default-link-hover-color:          $text-color !default;
 $navbar-default-link-hover-bg:             $brand-primary !default;
 $navbar-default-link-active-color:         $navbar-default-link-hover-color !default;
 $navbar-default-link-active-bg:            $navbar-default-link-hover-bg !default;
-$navbar-default-link-disabled-color:       $gray-light !default;
+$navbar-default-link-disabled-color:       $gray-dark !default;
 $navbar-default-link-disabled-bg:          transparent !default;
 
 // Navbar brand label
@@ -390,7 +390,7 @@ $navbar-default-toggle-border-color:       $gray-light !default;
 
 //=== Inverted navbar
 // Reset inverted navbar basics
-$navbar-inverse-color:                      $gray-light !default;
+$navbar-inverse-color:                      $gray-dark !default;
 $navbar-inverse-bg:                         #fff !default;
 $navbar-inverse-border:                     darken($navbar-inverse-bg, 10%) !default;
 
@@ -400,7 +400,7 @@ $navbar-inverse-link-hover-color:           $text-color !default;
 $navbar-inverse-link-hover-bg:              transparent !default;
 $navbar-inverse-link-active-color:          $navbar-inverse-link-hover-color !default;
 $navbar-inverse-link-active-bg:             transparent !default;
-$navbar-inverse-link-disabled-color:        $gray-light !default;
+$navbar-inverse-link-disabled-color:        $gray-dark !default;
 $navbar-inverse-link-disabled-bg:           transparent !default;
 
 // Inverted navbar brand label
@@ -459,7 +459,7 @@ $pagination-active-color:              #000 !default;
 $pagination-active-bg:                 $brand-primary !default;
 $pagination-active-border:             $btn-primary-border !default;
 
-$pagination-disabled-color:            $gray-light !default;
+$pagination-disabled-color:            $gray-dark !default;
 $pagination-disabled-bg:               $pagination-bg !default;
 $pagination-disabled-border:           $pagination-border !default;
 
@@ -687,7 +687,7 @@ $list-group-active-border:      $list-group-active-bg !default;
 $list-group-active-text-color:  lighten($list-group-active-bg, 40%) !default;
 
 //** Text color of disabled list items
-$list-group-disabled-color:      $gray-light !default;
+$list-group-disabled-color:      $gray-dark !default;
 //** Background color of disabled list items
 $list-group-disabled-bg:         $gray-light !default;
 //** Text color for content within disabled list items
@@ -848,13 +848,13 @@ $pre-scrollable-max-height:   340px !default;
 //** Horizontal offset for forms and lists.
 $component-offset-horizontal: 180px !default;
 //** Text muted color
-$text-muted:                  $gray-light !default;
+$text-muted:                  $gray-dark !default;
 //** Abbreviations and acronyms border color
 $abbr-border-color:           $gray-light !default;
 //** Headings small color
-$headings-small-color:        $gray-light !default;
+$headings-small-color:        $gray-dark !default;
 //** Blockquote small color
-$blockquote-small-color:      $gray-light !default;
+$blockquote-small-color:      $gray-dark !default;
 //** Blockquote font size
 $blockquote-font-size:        ($font-size-base * 1.25) !default;
 //** Blockquote border color
