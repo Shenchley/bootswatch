@@ -319,9 +319,9 @@ label {
   > li > a {
     margin-top: 6px;
     border-color: $navbar-default-border;
-    color: $brand-primary;
+    color: $text-color;
     @include transition(all 0.2s ease-in-out);
-    background-color: $gray-lighter;
+    background-color: $gray-dark;
   }
 
   > li > a:hover,
@@ -334,10 +334,11 @@ label {
   .open > a:focus {
     padding-bottom: ($padding-large-vertical + 3);
     margin-top: 0;
+    background-color: $brand-primary;
   }
 
   > li > a:hover {
-    background-color: $gray-lightest;
+    background-color: lighten($gray-dark, 10%);
   }
 
   .open > a,
@@ -583,7 +584,7 @@ a.list-group-item-danger {
     height: 0;
     border: solid transparent;
     border-width: 10px;
-    border-top-color: $navbar-default-bg;
+    border-top-color: $brand-primary;
     content: '';
     pointer-events: none;
 }
