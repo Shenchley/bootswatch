@@ -3174,14 +3174,14 @@ output {
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
 }
 .form-control::-moz-placeholder {
-  color: white;
+  color: #bec0c4;
   opacity: 1;
 }
 .form-control:-ms-input-placeholder {
-  color: white;
+  color: #bec0c4;
 }
 .form-control::-webkit-input-placeholder {
-  color: white;
+  color: #bec0c4;
 }
 .form-control::-ms-expand {
   border: 0;
