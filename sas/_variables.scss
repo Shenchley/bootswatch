@@ -29,6 +29,8 @@ $body-bg:               #fff !default;
 //** Global text color on `<body>`.
 $text-color:            #000 !default;
 
+$btn-text-color:        #fff !default;
+
 //** Global textual link color.
 $link-color:            $text-color !default;
 //** Link hover color set via `darken()` function.
@@ -143,27 +145,27 @@ $table-border-color:            $gray-light !default;
 
 $btn-font-weight:                normal !default;
 
-$btn-default-color:              $text-color !default;
+$btn-default-color:              $btn-text-color !default;
 $btn-default-bg:                 $gray-base !default;
 $btn-default-border:             darken($btn-default-bg, 10%) !default;
 
-$btn-primary-color:              $text-color !default;
+$btn-primary-color:              $btn-text-color !default;
 $btn-primary-bg:                 $brand-primary !default;
 $btn-primary-border:             darken($btn-primary-bg, 10%) !default;
 
-$btn-success-color:              $text-color !default;
+$btn-success-color:              $btn-text-color !default;
 $btn-success-bg:                 $brand-success !default;
 $btn-success-border:             darken($btn-success-bg, 10%) !default;
 
-$btn-info-color:                 $text-color!default;
+$btn-info-color:                 $btn-text-color!default;
 $btn-info-bg:                    $brand-info !default;
 $btn-info-border:                darken($btn-info-bg, 10%) !default;
 
-$btn-warning-color:              $text-color !default;
+$btn-warning-color:              $btn-text-color !default;
 $btn-warning-bg:                 $brand-warning !default;
 $btn-warning-border:             darken($btn-warning-bg, 10%) !default;
 
-$btn-danger-color:               $text-color !default;
+$btn-danger-color:               $btn-text-color !default;
 $btn-danger-bg:                  $brand-danger !default;
 $btn-danger-border:              darken($btn-danger-bg, 5%) !default;
 
@@ -232,18 +234,18 @@ $cursor-disabled:                not-allowed !default;
 //## Dropdown menu container and contents.
 
 //** Background for the dropdown menu.
-$dropdown-bg:                    $gray-base !default;
+$dropdown-bg:                    #000 !default;
 //** Dropdown menu `border-color`.
 $dropdown-border:                transparent !default;
 //** Dropdown menu `border-color` **for IE8**.
 $dropdown-fallback-border:       #ccc !default;
 //** Divider color for between dropdown items.
-$dropdown-divider-bg:            $gray-light !default;
+$dropdown-divider-bg:            $gray-dark !default;
 
 //** Dropdown link text color.
-$dropdown-link-color:            $text-color !default;
+$dropdown-link-color:            $btn-text-color !default;
 //** Hover color for dropdown links.
-$dropdown-link-hover-color:      $text-color !default;
+$dropdown-link-hover-color:      $btn-text-color !default;
 //** Hover background for dropdown links.
 $dropdown-link-hover-bg:         $brand-primary !default;
 
@@ -364,13 +366,13 @@ $navbar-padding-horizontal:        floor(($grid-gutter-width / 2)) !default;
 $navbar-padding-vertical:          (($navbar-height - $line-height-computed) / 2) !default;
 $navbar-collapse-max-height:       340px !default;
 
-$navbar-default-color:             $text-color !default;
-$navbar-default-bg:                $gray-dark !default;
+$navbar-default-color:             #fff !default;
+$navbar-default-bg:                #000 !default;
 $navbar-default-border:            transparent !default;
 
 // Navbar links
-$navbar-default-link-color:                $text-color !default;
-$navbar-default-link-hover-color:          $text-color !default;
+$navbar-default-link-color:                $btn-text-color !default;
+$navbar-default-link-hover-color:          $btn-text-color !default;
 $navbar-default-link-hover-bg:             $brand-primary !default;
 $navbar-default-link-active-color:         $navbar-default-link-hover-color !default;
 $navbar-default-link-active-bg:            $navbar-default-link-hover-bg !default;
@@ -578,9 +580,9 @@ $label-warning-bg:            $brand-warning !default;
 $label-danger-bg:             $brand-danger !default;
 
 //** Default label text color
-$label-color:                 #000 !default;
+$label-color:                 $btn-text-color !default;
 //** Default text color of a linked label
-$label-link-hover-color:      #000 !default;
+$label-link-hover-color:      darken($btn-text-color, 20%) !default;
 
 
 //== Modals
