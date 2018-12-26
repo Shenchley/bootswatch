@@ -10,10 +10,10 @@ $bootstrap-sass-asset-helper: false !default;
 
 $gray-base:              #d9dadc !default;
 $gray-dark:              #707279 !default;
-$gray:                   lighten($gray-base, 5.5%) !default;
+$gray:                   lighten($gray-base, 2%) !default;
 $gray-light:             lighten($gray-base, 30%) !default;
 
-$brand-primary:         #fcbf36 !default;
+$brand-primary:         #fbb20e !default;
 $brand-success:         #80c78d !default;
 $brand-info:            #6b8c9e !default;
 $brand-warning:         #f06723 !default;
@@ -146,7 +146,7 @@ $table-border-color:            $gray-light !default;
 $btn-font-weight:                normal !default;
 
 $btn-default-color:              $btn-text-color !default;
-$btn-default-bg:                 $gray !default;
+$btn-default-bg:                 darken($gray-base, 10%) !default;
 $btn-default-border:             darken($btn-default-bg, 10%) !default;
 
 $btn-primary-color:              $btn-text-color !default;
@@ -488,7 +488,7 @@ $pager-disabled-color:                 $pagination-disabled-color !default;
 
 $jumbotron-padding:              30px !default;
 $jumbotron-color:                $text-color !default;
-$jumbotron-bg:                   $gray !default;
+$jumbotron-bg:                   $gray-base !default;
 $jumbotron-heading-color:        inherit !default;
 $jumbotron-font-size:            ceil(($font-size-base * 1.5)) !default;
 $jumbotron-heading-font-size:    ceil(($font-size-base * 4.5)) !default;
@@ -538,7 +538,7 @@ $tooltip-arrow-color:         $tooltip-bg !default;
 //##
 
 //** Popover body background color
-$popover-bg:                          $gray !default;
+$popover-bg:                          $gray-base !default;
 //** Popover maximum width
 $popover-max-width:                   276px !default;
 //** Popover border color
@@ -567,7 +567,7 @@ $popover-arrow-outer-fallback-color:  darken($popover-fallback-border-color, 20%
 //##
 
 //** Default label background color
-$label-default-bg:            $gray-light !default;
+$label-default-bg:            darken($gray-base, 10%) !default;
 //** Primary label background color
 $label-primary-bg:            $brand-primary !default;
 //** Success label background color
@@ -598,7 +598,7 @@ $modal-title-padding:         15px !default;
 $modal-title-line-height:     $line-height-base !default;
 
 //** Background color of modal content area
-$modal-content-bg:                             $gray !default;
+$modal-content-bg:                             $gray-base !default;
 //** Modal content border color
 $modal-content-border-color:                   rgba(0,0,0,.05) !default;
 //** Modal content border color **for IE8**
@@ -704,7 +704,7 @@ $list-group-link-heading-color: #333 !default;
 //
 //##
 
-$panel-bg:                    $gray !default;
+$panel-bg:                    $gray-base !default;
 $panel-body-padding:          15px !default;
 $panel-heading-padding:       10px 15px !default;
 $panel-footer-padding:        $panel-heading-padding !default;
