@@ -1,0 +1,736 @@
+// Harvey 3.3.5
+// Bootswatch
+// -----------------------------------------------------
+
+$web-font-path: "https://fonts.googleapis.com/css?family=Work+Sans:300,400,700,400italic" !default;
+@import url($web-font-path);
+
+@mixin shadow($width: 4px){
+  //border-width: 0 1px $width 1px;
+}
+
+// Navbar =====================================================================
+
+
+// Buttons ====================================================================
+
+.btn {
+  padding: ($padding-base-vertical + 4) $padding-base-horizontal $padding-base-vertical + 1;
+  @include shadow();
+  font-size: 12px;
+  text-transform: uppercase;
+
+  &:active {
+    margin-top: 2px;
+  }
+}
+
+.btn-lg,
+.btn-group-lg > .btn {
+  padding: ($padding-large-vertical + 2) $padding-large-horizontal $padding-large-vertical;
+  line-height: 15px;
+}
+
+.btn-sm,
+.btn-group-sm > .btn {
+  padding: ($padding-small-vertical + 2) $padding-small-horizontal $padding-small-vertical;
+}
+
+.btn-xs,
+.btn-group-xs > .btn {
+  padding: ($padding-xs-vertical + 2) $padding-xs-horizontal $padding-xs-vertical;
+}
+
+.btn-default:hover,
+.btn-default:focus,
+.btn-group.open .dropdown-toggle.btn-default {
+  background-color: $btn-default-border;
+  border-color: $btn-default-border;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-group.open .dropdown-toggle.btn-primary {
+  background-color: $btn-primary-border;
+  border-color: $btn-primary-border;
+}
+
+btn-success:hover,
+btn-success:focus,
+btn-group.open .dropdown-toggle.btn-success {
+  background-color: $btn-success-border;
+  border-color: $btn-success-border;
+}
+
+.btn-info:hover,
+.btn-info:focus,
+.btn-group.open .dropdown-toggle.btn-info {
+  background-color: $btn-info-border;
+  border-color: $btn-info-border;
+}
+
+.btn-warning:hover,
+.btn-warning:focus,
+.btn-group.open .dropdown-toggle.btn-warning {
+  background-color: $btn-warning-border;
+  border-color: $btn-warning-border;
+}
+
+.btn-danger:hover,
+.btn-danger:focus,
+.btn-group.open .dropdown-toggle.btn-danger {
+  background-color: $btn-danger-border;
+  border-color: $btn-danger-border;
+}
+
+
+.btn-gray,
+.btn-gray,
+.btn-group.open .dropdown-toggle.btn-gray {
+  background-color: $btn-gray-bg;
+}
+
+.btn-gray:hover,
+.btn-gray:focus,
+.btn-group.open .dropdown-toggle.btn-gray {
+  background-color: $btn-gray-bg;
+  border-color: $btn-gray-border;
+}
+
+.border {
+  border: 0.5pt;
+}
+
+.border-primary {
+  border: solid $btn-primary-border;
+}
+
+.border-success {
+  border: solid $btn-success-border;
+}
+
+.border-info {
+  border: solid $btn-info-border;
+}
+
+.border-warning {
+  border: solid $btn-warning-border;
+}
+
+.border-danger {
+  border: solid $btn-danger-border;
+}
+
+.btn-group.open .dropdown-toggle {
+  @include box-shadow(none);
+}
+
+.navbar-btn {
+  &:hover {
+    margin-top: 8px
+  }
+
+  &:active {
+    margin-top: 9px
+  }
+
+  &.btn-sm {
+    &:hover {
+      margin-top: 11px
+    }
+
+    &:active {
+      margin-top: 12px
+    }
+  }
+
+  &.btn-xs {
+    &:hover {
+      margin-top: 15px
+    }
+
+    &:active {
+      margin-top: 16px
+    }
+  }
+}
+
+.btn-group-vertical {
+  .btn + .btn {
+    &:hover {
+      border-top-width: 1px;
+    }
+
+    &:active {
+      border-top-width: 2px;
+    }
+  }
+}
+
+// Typography =================================================================
+
+.text-primary,
+.text-primary:hover {
+  color: $brand-primary;
+}
+
+.text-success,
+.text-success:hover {
+  color: $brand-success;
+}
+
+.text-danger,
+.text-danger:hover {
+  color: $brand-danger;
+}
+
+.text-warning,
+.text-warning:hover {
+  color: $brand-warning;
+}
+
+.text-info,
+.text-info:hover {
+  color: $brand-info;
+}
+
+// Tables =====================================================================
+
+table,
+.table {
+
+  a:not(.btn) {
+    text-decoration: underline;
+  }
+
+  .dropdown-menu a {
+    text-decoration: none;
+  }
+
+  .success,
+  .warning,
+  .danger,
+  .info {
+    color: #fff;
+
+    a:not(.btn) {
+      color: #fff;
+    }
+  }
+
+  &:not(.table-bordered) {
+    > thead > tr > th,
+    > tbody > tr > th,
+    > tfoot > tr > th,
+    > thead > tr > td,
+    > tbody > tr > td,
+    > tfoot > tr > td {
+      border-color: transparent;
+    }
+  }
+}
+
+// Forms ======================================================================
+
+label {
+  font-weight: normal;
+}
+
+.input-group-btn {
+  border: 0px none;
+}
+
+.has-warning {
+  .help-block,
+  .control-label,
+  .radio,
+  .checkbox,
+  .radio-inline,
+  .checkbox-inline,
+  &.radio label,
+  &.checkbox label,
+  &.radio-inline label,
+  &.checkbox-inline label,
+  .form-control-feedback {
+    color: $brand-warning;
+  }
+
+  .form-control,
+  .form-control:focus {
+    border: 1px solid $brand-warning;
+    @include box-shadow(inset 0 2px 0 rgba(0, 0, 0, 0.075));
+  }
+
+  .input-group-addon {
+    border: 1px solid $brand-warning;
+  }
+}
+
+.has-error {
+  .help-block,
+  .control-label,
+  .radio,
+  .checkbox,
+  .radio-inline,
+  .checkbox-inline,
+  &.radio label,
+  &.checkbox label,
+  &.radio-inline label,
+  &.checkbox-inline label,
+  .form-control-feedback {
+    color: $brand-danger;
+  }
+
+  .form-control,
+  .form-control:focus {
+    border: 1px solid $brand-danger;
+    @include box-shadow(inset 0 2px 0 rgba(0, 0, 0, 0.075));
+  }
+
+  .input-group-addon {
+    border: 1px solid $brand-danger;
+  }
+}
+
+.has-success {
+  .help-block,
+  .control-label,
+  .radio,
+  .checkbox,
+  .radio-inline,
+  .checkbox-inline,
+  &.radio label,
+  &.checkbox label,
+  &.radio-inline label,
+  &.checkbox-inline label,
+  .form-control-feedback {
+    color: $brand-success;
+  }
+
+  .form-control,
+  .form-control:focus {
+    border: 1px solid $brand-success;
+    @include box-shadow(inset 0 2px 0 rgba(0, 0, 0, 0.075));
+  }
+
+  .input-group-addon {
+    border: 1px solid $brand-success;
+  }
+}
+
+// Navs =======================================================================
+
+.nav {
+  .open > a,
+  .open > a:hover,
+  .open > a:focus {
+    border-color: transparent;
+  }
+}
+
+.nav-tabs {
+
+  > li > a {
+    margin-top: 6px;
+    border-color: $navbar-default-border;
+    color: $brand-primary;
+    @include transition(all 0.2s ease-in-out);
+    background-color: $gray-lighter;
+  }
+
+  > li > a:hover,
+  > li > a:focus,
+  > li.active > a,
+  > li.active > a:hover,
+  > li.active > a:focus,
+  .open > a,
+  .open > a:hover,
+  .open > a:focus {
+    padding-bottom: ($padding-large-vertical + 3);
+    margin-top: 0;
+  }
+
+  > li > a:hover {
+    background-color: $gray-lightest;
+  }
+
+  .open > a,
+  .open > a:hover,
+  .open > a:focus {
+    border-color: $navbar-default-border;
+  }
+
+  > li.disabled > a:hover,
+  > li.disabled > a:focus {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 6px;
+  }
+
+  &.nav-justified > li {
+    vertical-align: bottom;
+  }
+}
+
+.dropdown-menu {
+  margin-top: 0;
+  @include shadow();
+  border-top-width: 1px;
+  @include box-shadow(none);
+}
+
+.breadcrumb {
+  @include shadow();
+}
+
+.pagination,
+.pager {
+
+  > li > a,
+  > li > span {
+    position: relative;
+    top: 0;
+    @include shadow();
+    color: $pagination-color;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+
+    &:hover {
+      top: 1px;
+      border-bottom-width: 3px;
+    }
+
+    &:active {
+      top: 2px;
+      border-bottom-width: 2px;
+    }
+  }
+
+  > .disabled > a,
+  > .disabled > span {
+
+    &:hover {
+      top: 0;
+      @include shadow();
+    }
+
+    &:active {
+      top: 0;
+      @include shadow();
+    }
+  }
+}
+
+.pager {
+
+  > li > a,
+  > li > span,
+  > .disabled > a,
+  > .disabled > span {
+
+    &,
+    &:hover,
+    &:active {
+      border-left-width: 2px;
+      border-right-width: 2px;
+    }
+  }
+}
+
+// Indicators =================================================================
+
+.close {
+  color: #fff;
+  text-decoration: none;
+  opacity: 0.4;
+
+  &:hover,
+  &:focus {
+    color: #fff;
+    opacity: 1;
+  }
+}
+
+.alert {
+  @include shadow();
+
+  .alert-link {
+    font-weight: normal;
+    color: #fff;
+    text-decoration: underline;
+  }
+}
+
+.label {
+  font-weight: normal;
+}
+
+// Progress bars ==============================================================
+
+
+// Containers =================================================================
+
+.well {
+  border: 1px solid $navbar-default-border;
+  @include box-shadow(inset 0 2px 0 rgba(0, 0, 0, 0.05));
+}
+
+a.list-group-item {
+
+  &.active,
+  &.active:hover,
+  &.active:focus {
+    border-color: $list-group-border;
+  }
+}
+
+a.list-group-item-success {
+  &.active {
+    background-color: $state-success-bg;
+  }
+
+  &.active:hover,
+  &.active:focus {
+    background-color: darken($state-success-bg, 5%);
+  }
+}
+
+a.list-group-item-warning {
+  &.active {
+    background-color: $state-warning-bg;
+  }
+
+  &.active:hover,
+  &.active:focus {
+    background-color: darken($state-warning-bg, 5%);
+  }
+}
+
+a.list-group-item-danger {
+  &.active {
+    background-color: $state-danger-bg;
+  }
+
+  &.active:hover,
+  &.active:focus {
+    background-color: darken($state-danger-bg, 5%);
+  }
+}
+
+.jumbotron {
+  border: 1px solid $navbar-default-border;
+  @include box-shadow(inset 0 2px 0 rgba(0, 0, 0, 0.05));
+}
+
+.panel {
+  border: 1px solid $navbar-default-border;
+  @include shadow();
+
+}
+
+.panel-default {
+  .close {
+    color: $text-color;
+  }
+}
+
+.modal {
+  .close {
+    color: $text-color;
+  }
+}
+
+.popover {
+  color: $text-color;
+}
+
+// Navbar Customizations ====================================================================
+
+.navbar-brand { /* change padding for 30px logo */
+    padding: 3px 15px;
+}
+
+.navbar .nav>li>a{
+    font-size: 1.3em;
+    font-weight: 500;
+}
+
+.navbar .dropdown-menu {
+    padding: 15px;
+}
+.navbar .dropdown-menu>li>a{
+    font-size: 1.2em;
+}
+.navbar .navbar-text.text-center{
+    float: none;
+}
+
+// Nav Tabs Customizations ====================================================================
+
+.nav-tabs>li:first-child{
+    margin-left:0;
+    margin-right:3px;
+}
+.nav-tabs>li{
+    margin-left:3px;
+    margin-right:3px;
+}
+
+.nav-tabs>li>a{
+    margin-top:0;
+    padding-top:13px;
+    padding-bottom: 13px;
+    border: none;
+    margin-right:0;
+}
+
+.nav-tabs>li.active>a{
+    overflow: visible;
+}
+.nav-tabs>li.active>a::after{
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -10px;
+    width: 0;
+    height: 0;
+    border: solid transparent;
+    border-width: 10px;
+    border-top-color: $nav-tabs-active-link-hover-bg;
+    content: '';
+    pointer-events: none;
+}
+
+.tab-panel{
+    padding: 20px 15px;
+    min-height: 468px;
+}
+.tab-panel .panel-header{
+    font-size: 1.8em;
+    font-weight: 500;
+    text-align: center;
+    margin-top: 30px;
+    display: block;
+}
+.tab-panel hr{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    width: 85%;
+    border: 0;
+}
+
+// Nav Tabs Customizations ====================================================================
+
+ul.nav-wizard {
+  background: $gray-lighter;
+  -webkit-border-radius: $border-radius-base;
+  -moz-border-radius: $border-radius-base;
+  border-radius:$border-radius-base;
+  *zoom: 1;
+  position: relative;
+  overflow: hidden;
+}
+ul.nav-wizard:before {
+  display: block;
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  top: 46px;
+  height: 47px;
+  z-index: 11;
+  content: " ";
+}
+ul.nav-wizard:after {
+  display: block;
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  top: 138px;
+  height: 47px;
+  z-index: 11;
+  content: " ";
+}
+ul.nav-wizard li {
+  position: relative;
+  float: left;
+  height: 46px;
+  display: inline-block;
+  text-align: middle;
+  padding: 0 20px 0 30px;
+  margin: 0;
+  font-size: 16px;
+  line-height: 46px;
+}
+ul.nav-wizard li a {
+  padding: 0;
+}
+ul.nav-wizard li a:hover {
+  background-color: transparent;
+}
+ul.nav-wizard li:before {
+  position: absolute;
+  display: block;
+  border: 24px solid transparent;
+  border-left: 16px solid $gray-light;
+  border-right: 0;
+  top: -1px;
+  z-index: 10;
+  content: '';
+  right: -16px;
+}
+ul.nav-wizard li:after {
+  position: absolute;
+  display: block;
+  border: 24px solid transparent;
+  border-left: 16px solid $gray-lighter;
+  border-right: 0;
+  top: -1px;
+  z-index: 10;
+  content: '';
+  right: -15px;
+}
+ul.nav-wizard li.active {
+  background: $wizard-active-bg;
+}
+ul.nav-wizard li.active:after {
+  border-left: 16px solid $wizard-active-bg;
+}
+ul.nav-wizard li.active a,
+ul.nav-wizard li.active a:active,
+ul.nav-wizard li.active a:visited,
+ul.nav-wizard li.active a:focus {
+  background: $wizard-active-bg;
+  color: $brand-primary;
+}
+ul.nav-wizard .active ~ li {
+  background: $gray-lighter;
+}
+ul.nav-wizard .active ~ li:after {
+  border-left: 16px solid $gray-lighter;
+}
+ul.nav-wizard .active ~ li a,
+ul.nav-wizard .active ~ li a:active,
+ul.nav-wizard .active ~ li a:visited,
+ul.nav-wizard .active ~ li a:focus {
+  background: $gray-lighter;
+}
+
+ul.nav-wizard.nav-wizard-backnav li:hover:after {
+  border-left: 16px;
+}
+
+ul.nav-wizard.nav-wizard-backnav .active ~ li {
+  color: $gray-light;
+  background: $gray-lighter;
+}
+ul.nav-wizard.nav-wizard-backnav .active ~ li:after {
+  border-left: 16px solid $gray-lighter;
+}
+ul.nav-wizard.nav-wizard-backnav .active ~ li a,
+ul.nav-wizard.nav-wizard-backnav .active ~ li a:active,
+ul.nav-wizard.nav-wizard-backnav .active ~ li a:visited,
+ul.nav-wizard.nav-wizard-backnav .active ~ li a:focus {
+  color: $gray-light;
+  background: $gray-lighter;
+}
