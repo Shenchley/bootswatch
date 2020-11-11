@@ -8,7 +8,6 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Work+Sans:300,400,700,4
 @mixin shadow($width: 4px){
   //border-width: 0 1px $width 1px;
 }
-
 // Navbar =====================================================================
 
 
@@ -22,6 +21,13 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Work+Sans:300,400,700,4
 
   &:active {
     margin-top: 2px;
+  }
+}
+
+.panel-heading, .modal-header {
+  h1, h2, h3, h4, h5, h6 { 
+    font-family: 'Domine', Fallback, sans-serif;
+    color: $brand-primary;
   }
 }
 
@@ -82,7 +88,6 @@ btn-group.open .dropdown-toggle.btn-success {
   background-color: $btn-danger-border;
   border-color: $btn-danger-border;
 }
-
 
 .btn-gray,
 .btn-gray,
@@ -191,8 +196,9 @@ btn-group.open .dropdown-toggle.btn-success {
 
 .text-info,
 .text-info:hover {
-  color: $brand-info;
+  color:  $brand-info !important;
 }
+
 
 // Tables =====================================================================
 
