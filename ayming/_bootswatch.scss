@@ -25,10 +25,12 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Work+Sans:300,400,700,4
 }
 
 .panel-heading, .modal-header {
-  h1, h2, h3, h4, h5, h6 { 
-    font-family: 'Domine', Fallback, sans-serif;
-    color: $brand-primary;
-  }
+    font-size: 1.2em;
+
+    h1, h2, h3, h4, h5, h6 {
+        font-family: 'Domine', Fallback, sans-serif;
+        color: $brand-primary;
+    }
 }
 
 .btn-lg,
@@ -172,7 +174,42 @@ btn-group.open .dropdown-toggle.btn-success {
   }
 }
 
+.btn-icon-only {
+    border-radius: 2rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    color: $brand-info;
+    background: linear-gradient(180deg,lighten($gray-base, 99%), lighten($gray-base, 98%));
+    border-color: lighten($gray-base, 99%);
+    box-shadow: 2px 2px 0 0 rgba(25,25,35,.05);
+    margin-right: 4px;
+
+    &:hover {
+        color: $brand-primary;
+        background: linear-gradient(180deg,lighten($gray-base, 98.5%), lighten($gray-base, 97.5%));
+        border-color: transparent;
+    }
+}
+
+.btn-icon-warning {
+    color: $brand-danger;
+
+    &:hover {
+        color: lighten($brand-danger, 10%);
+    }
+}
+
 // Typography =================================================================
+
+h1 {
+    font-size: 1.8em;
+    color: $brand-primary;
+}
+
+h4 {
+    font-size: 1.1em;
+    color: $brand-primary;
+}
 
 .text-primary,
 .text-primary:hover {
@@ -196,7 +233,7 @@ btn-group.open .dropdown-toggle.btn-success {
 
 .text-info,
 .text-info:hover {
-  color:  $brand-info !important;
+  color:  #ffffff !important;
 }
 
 
@@ -205,35 +242,56 @@ btn-group.open .dropdown-toggle.btn-success {
 table,
 .table {
 
-  a:not(.btn) {
-    text-decoration: underline;
-  }
-
-  .dropdown-menu a {
-    text-decoration: none;
-  }
-
-  .success,
-  .warning,
-  .danger,
-  .info {
-    color: #fff;
-
     a:not(.btn) {
-      color: #fff;
+        text-decoration: none;
+        font-weight: 100;
     }
-  }
 
-  &:not(.table-bordered) {
-    > thead > tr > th,
-    > tbody > tr > th,
-    > tfoot > tr > th,
-    > thead > tr > td,
-    > tbody > tr > td,
-    > tfoot > tr > td {
-      border-color: transparent;
+    .dropdown-menu a {
+        text-decoration: none;
     }
-  }
+
+    .success,
+    .warning,
+    .danger,
+    .info {
+        color: #fff;
+
+        a:not(.btn) {
+            color: #fff;
+            text-decoration: none;
+        }
+    }
+
+    th {
+        font-weight: 100;
+        font-size: 1.2em;
+        color: $brand-primary;
+    }
+
+    td {
+        font-size: 1.1em;
+    }
+
+    &:not(.table-bordered) {
+        > thead > tr > th,
+        > tbody > tr > th,
+        > tfoot > tr > th,
+        > thead > tr > td,
+        > tbody > tr > td,
+        > tfoot > tr > td {
+            border-color: $gray-lighter;
+        }
+    }
+
+    &:not(.table-bordered) {
+        > thead > tr > th,
+        > tbody > tr > th,
+        > tfoot > tr > th {
+            border-bottom: 2px solid $gray-lighter;
+            border-top: none;
+        }
+    }
 }
 
 // Forms ======================================================================
@@ -327,55 +385,89 @@ label {
 // Navs =======================================================================
 
 .nav {
-  .open > a,
-  .open > a:hover,
-  .open > a:focus {
-    border-color: transparent;
-  }
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+
+    .open > a,
+    .open > a:hover,
+    .open > a:focus {
+        border-color: transparent;
+    }
+
+    &.nav-tabs {
+        flex-wrap: nowrap;
+        margin-bottom: 1rem;
+        margin-top: -1px;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+        border-bottom: 1px solid rgba(34,34,48,0.1);
+    }
 }
 
 .nav-tabs {
 
-  > li > a {
-    margin-top: 6px;
-    border-color: $navbar-default-border;
-    color: $brand-primary;
-    @include transition(all 0.2s ease-in-out);
-    background-color: $gray-lighter;
-  }
+    > li {
+        margin-bottom: -1px;
+        outline: 0;
+        display: block;
+        background-color: transparent;
+    }
 
-  > li > a:hover,
-  > li > a:focus,
-  > li.active > a,
-  > li.active > a:hover,
-  > li.active > a:focus,
-  .open > a,
-  .open > a:hover,
-  .open > a:focus {
-    padding-bottom: ($padding-large-vertical + 3);
-    margin-top: 0;
-  }
+    > li > a {
+        padding-left: 2rem;
+        padding-right: 2rem;
+        border-top-left-radius: .25rem;
+        border-top-right-radius: .25rem;
+        background-color: transparent;
+        border-width: 0 0 3px;
+        border: 0px solid transparent;
+        font-size: 1.1em;
+        transition: none;
+        /*color: #666E7E;*/
+        margin-top: 6px;
+    }
 
-  > li > a:hover {
-    background-color: $gray-lightest;
-  }
+    > li > a:hover,
+    > li > a:focus,
+    > li.active > a,
+    > li.active > a:hover,
+    > li.active > a:focus,
+    .open > a,
+    .open > a:hover,
+    .open > a:focus {
+        color: #2e66a2;
+        background-color: transparent;
+        border-color: $brand-primary;
+        border-width: 0 0 3px;
+    }
 
-  .open > a,
-  .open > a:hover,
-  .open > a:focus {
-    border-color: $navbar-default-border;
-  }
+    > li > a:hover {
+        color: #0078B9;
+        background-color: transparent;
+        border-color: $gray-light;
+        border-width: 0 0 3px;
+    }
 
-  > li.disabled > a:hover,
-  > li.disabled > a:focus {
-    padding-top: 10px;
-    padding-bottom: 10px;
-    margin-top: 6px;
-  }
+    .open > a,
+    .open > a:hover,
+    .open > a:focus {
+        border-color: $navbar-default-border;
+    }
 
-  &.nav-justified > li {
-    vertical-align: bottom;
-  }
+    > li.disabled > a:hover,
+    > li.disabled > a:focus {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        margin-top: 6px;
+    }
+
+    &.nav-justified > li {
+        vertical-align: bottom;
+    }
 }
 
 .dropdown-menu {
@@ -530,15 +622,18 @@ a.list-group-item-danger {
 }
 
 .panel {
-  border: 1px solid $navbar-default-border;
-  @include shadow();
-
+    border: 1px solid $navbar-default-border;
+    box-shadow: 0 0.15rem 1.75rem 0 rgba(33, 40, 50, 0.15);
 }
 
 .panel-default {
   .close {
     color: $text-color;
   }
+}
+
+.panel-primary > .panel-heading {
+        background: linear-gradient(180deg,lighten($brand-primary, 5%), $brand-primary);
 }
 
 .modal {
@@ -551,15 +646,21 @@ a.list-group-item-danger {
   color: $text-color;
 }
 
+.row.gap-above {
+    margin-top: 2em;
+}
+
 // Navbar Customizations ====================================================================
 
 .navbar-brand { /* change padding for 30px logo */
     padding: 3px 15px;
+    margin-right: 3em;
 }
 
-.navbar .nav>li>a{
-    font-size: 1.3em;
-    font-weight: 500;
+.navbar .nav > li > a {
+    font-size: 1.1em;
+    padding-left: 2rem;
+    padding-right: 2rem;
 }
 
 .navbar .dropdown-menu {
@@ -572,29 +673,21 @@ a.list-group-item-danger {
     float: none;
 }
 
+.nav.navbar-nav.navbar-right button {
+    margin-top: 1em;
+}
+
 // Nav Tabs Customizations ====================================================================
 
 .nav-tabs>li:first-child{
     margin-left:0;
     margin-right:3px;
 }
-.nav-tabs>li{
-    margin-left:3px;
-    margin-right:3px;
-}
-
-.nav-tabs>li>a{
-    margin-top:0;
-    padding-top:13px;
-    padding-bottom: 13px;
-    border: none;
-    margin-right:0;
-}
 
 .nav-tabs>li.active>a{
     overflow: visible;
 }
-.nav-tabs>li.active>a::after{
+.nav-tabs > li.active > a::after {
     position: absolute;
     top: 100%;
     left: 50%;
@@ -603,7 +696,7 @@ a.list-group-item-danger {
     height: 0;
     border: solid transparent;
     border-width: 10px;
-    border-top-color: $nav-tabs-active-link-hover-bg;
+    border-top-color: $brand-primary;
     content: '';
     pointer-events: none;
 }
@@ -739,4 +832,16 @@ ul.nav-wizard.nav-wizard-backnav .active ~ li a:visited,
 ul.nav-wizard.nav-wizard-backnav .active ~ li a:focus {
   color: $gray-light;
   background: $gray-lighter;
+}
+
+
+// Login page customisations ====================================================================
+
+.login-body {
+    margin: 2rem;
+}
+
+.row-fluid {
+    display: flex;
+    justify-content: center;
 }
